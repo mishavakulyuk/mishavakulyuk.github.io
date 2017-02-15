@@ -1,0 +1,7 @@
+img{
+	height: 250px;
+}
+
+section#main{
+	background-image: url(../img/183_cartbbig.png);
+}
