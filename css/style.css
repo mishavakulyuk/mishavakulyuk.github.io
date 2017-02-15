@@ -1,7 +1,10 @@
-img{
-	height: 250px;
+section#main{
+	background-color: #a400ae;
+	height: 100vh;
 }
 
-section#main{
-	background-image: url(../img/183_cartbbig.png);
+h1{
+	color: #fff;
+	margin-top: 25%;
+	text-transform: uppercase;
 }
