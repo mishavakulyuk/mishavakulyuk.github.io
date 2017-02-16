@@ -8,3 +8,21 @@ h1{
 	margin-top: 25%;
 	text-transform: uppercase;
 }
+section#example{
+	height: 100vh;
+	padding-top: 100px;
+}
+.box{
+	height: 100px;
+	border:2px solid #a400ae;
+}
+.box_in{
+	height: 50px;
+	background-color: green ;
+	border:2px dashed #000;
+
+}
+
+
+
+
