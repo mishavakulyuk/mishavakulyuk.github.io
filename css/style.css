@@ -13,9 +13,28 @@ body {
   color: #626262;
 }
 header {
-  background-color: #f5f5f5;
+  background: #f5f5f5 url(../img/header-fon.jpg);
+  background-size: cover;
   min-height: 780px;
   height: 100vh;
+}
+section {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.sectiop-header {
+  margin-bottom: 5%;
+}
+.sectiop-header h2 {
+  font-size: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+.sectiop-header h2 span {
+  color: #fc6744;
+}
+.sectiop-header p {
+  font-size: 16px;
 }
 input:focus,
 button:focus,
@@ -143,4 +162,55 @@ textarea:focus {
   -ms-transform: translateY(-8px);
   -o-transform: translateY(-8px);
   transform: translateY(-8px);
+}
+.process-box {
+  color: #ffffff;
+  padding: 25px;
+  padding-top: 30px;
+  text-align: center;
+}
+.process-box i.fa {
+  font-size: 50px;
+}
+.process-box h4 {
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+.process-box p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.process-btn {
+  position: absolute;
+  display: inline-block;
+  color: #706b73;
+  background-color: #ffffff;
+  border: none;
+  width: 80% ;
+  height: 50px;
+  border-radius: 50px;
+  left: 10%;
+  top: 85%;
+  font-size: 16px;
+}
+.box-tomi {
+  background-color: #4eb2f7;
+}
+.box-koimona {
+  background-color: #c049f8;
+}
+.box-koire {
+  background-color: #817eff;
+}
+.box-lara {
+  background-color: #f74770;
+}
+i.fa-camera-retro {
+  --webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transform: rotate(-15deg);
 }

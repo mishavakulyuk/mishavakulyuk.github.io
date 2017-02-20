@@ -14,15 +14,37 @@
 @base-text:#626262;
 @base-fon:#f5f5f5;
 @form-line:#c7c7c7;
+@bg-tomi:#4eb2f7;
+@bg-koimona:#c049f8;
+@bg-koire:#817eff;
+@bg-lara:#f74770;
 body{
 	font-size:14px;
 	.opn-reg;
 	color:@base-text;
 }
 header{
-	background-color:@base-fon;
+	background: @base-fon url(../img/header-fon.jpg);
+	background-size: cover;
 	min-height: 780px;
 	height:100vh; 
+}
+section{
+	margin-top: 10%;
+	margin-bottom:10%;
+}
+.sectiop-header{
+	margin-bottom:5%;
+	h2{
+		font-size: 50px;
+		.opn-bold;
+		span{
+			color:@base-red;
+		}
+	}
+	p{
+		font-size:16px;
+	}
 }
 input,button,textarea{
 	&:focus{
@@ -156,4 +178,61 @@ input,button,textarea{
 		}
 
 
+.process{
+	&-box{
+		color:@white;
+		padding: 25px;
+		padding-top: 30px;
+		text-align: center;
+		i.fa {
+			font-size:50px;
+		}
+		h4{
+			font-size:20px;
+			margin-top:20px;
+			.opn-bold;
+		}
+		p{
+			margin-top:20px;
+			font-size:16px;
+		}
+	}
+	&-btn{
+		position:absolute;
+		display:inline-block;
+		color:@base-black;
+		background-color:@white;
+		border:none;
+		width:80% ;
+		height: 50px;
+		border-radius:50px;
+		left:10%;
+		top:85%;
+		font-size:16px;
+	}
+}
+
+
+.box{
+	&-tomi{
+		background-color:@bg-tomi;
+	}
+	&-koimona{
+		background-color:@bg-koimona;
+	}
+	&-koire{
+		background-color:@bg-koire;
+	}
+	&-lara{
+		background-color:@bg-lara;
+	}
+}
+
+i.fa-camera-retro{
+	--webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
 	
+}
