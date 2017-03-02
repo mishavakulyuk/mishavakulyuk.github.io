@@ -21,6 +21,7 @@
 @bg-lara:#f74770;
 @bg-list:#fbfbfb;
 @yellow:#ffef3b;
+@bg-footer:#f7f7f7;
 body{
 	font-size:14px;
 	.opn-reg;
@@ -467,4 +468,77 @@ transition-delay:.2s;
 
 .slick-dots{
 	margin-bottom: -50px;
+}
+
+footer{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: @bg-footer;
+}
+
+.footer{
+	&-btn{
+		background-color:@white;
+		color:@base-black;
+		font-size:16px;
+		border:none;
+		padding: 12px 45px;
+		-webkit-border-radius:50px ;
+		-moz-border-radius:50px ;
+		-ms-border-radius:50px ;
+		-o-border-radius:50px ;
+		border-radius:50px ;
+		box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.07);
+	}
+}
+
+.modal-header{
+	background-color:@base-red;
+	border:none;
+	span{
+		font-size:20px;
+
+	}
+}
+
+.modal-body{
+	background-color:@base-red;
+}
+
+
+.modal-1{
+	&-header{
+		background-color:#4eb2f7;
+	}
+	&-body{
+		background-color:@white;
+	}
+}
+.modal-set{
+	&-header{
+		background-color:#c049f8;
+	}
+	&-body{
+		background-color:@white;
+	}
+}
+.modal-koire{
+	&-header{
+		background-color:#817eff;
+	}
+	&-body{
+		background-color:@white;
+	}
+}
+.modal-lara{
+	&-header{
+		background-color:#f74770;
+	}
+	&-body{
+		background-color:@white;
+	}
+}
+.lefting{
+float:left;
+    margin: 7px 7px 7px 0;
 }

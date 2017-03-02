@@ -421,3 +421,59 @@ i.fa-camera-retro {
 .slick-dots {
   margin-bottom: -50px;
 }
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f7f7f7;
+}
+.footer-btn {
+  background-color: #ffffff;
+  color: #706b73;
+  font-size: 16px;
+  border: none;
+  padding: 12px 45px;
+  -webkit-border-radius: 50px ;
+  -moz-border-radius: 50px ;
+  -ms-border-radius: 50px ;
+  -o-border-radius: 50px ;
+  border-radius: 50px ;
+  box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.07);
+}
+.modal-header {
+  background-color: #fc6744;
+  border: none;
+}
+.modal-header span {
+  font-size: 20px;
+}
+.modal-body {
+  background-color: #fc6744;
+}
+.modal-1-header {
+  background-color: #4eb2f7;
+}
+.modal-1-body {
+  background-color: #ffffff;
+}
+.modal-set-header {
+  background-color: #c049f8;
+}
+.modal-set-body {
+  background-color: #ffffff;
+}
+.modal-koire-header {
+  background-color: #817eff;
+}
+.modal-koire-body {
+  background-color: #ffffff;
+}
+.modal-lara-header {
+  background-color: #f74770;
+}
+.modal-lara-body {
+  background-color: #ffffff;
+}
+.lefting {
+  float: left;
+  margin: 7px 7px 7px 0;
+}
