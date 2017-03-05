@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -35,7 +36,7 @@
         </div>
       <div class="row">
         <div class="col-lg-4">
-          <div class="main-form">
+          <div class="main-form wow fadeInUp">
             <p class="main-form-header"><span>Send</span> A Message</p>
             <form action="#">
               <input type="text" placeholder="Your Name">
@@ -62,7 +63,7 @@
         </div>
         <div class="row">
           <div class="col-lg-3">
-            <div class="process-box box-tomi">
+            <div class="process-box wow fadeInLeft box-tomi" data-wow-delay="0.2s">
               <i class="fa fa-magnet"></i>
               <h4>Koc Koi Tomi</h4>
               <p>Lorem ipsum is dummy lorem very dumy</p>
@@ -72,7 +73,7 @@
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="process-box box-koimona">
+            <div class="process-box wow fadeInLeft box-koimona" data-wow-delay="0.4s">
               <i class="fa fa-bug"></i>
               <h4>Koimona Set</h4>
               <p>Lorem ipsum is dummy lorem very dumy</p>
@@ -82,7 +83,7 @@
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="process-box box-koire">
+            <div class="process-box wow fadeInRight box-koire" data-wow-delay="0.4s">
               <i class="fa fa-cogs"></i>
               <h4>Setting Koire</h4>
               <p>Lorem ipsum is dummy lorem very dumy</p>
@@ -92,7 +93,7 @@
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="process-box box-lara">
+            <div class="process-box wow fadeInRight box-lara" data-wow-delay="0.2s">
               <i class="fa fa-camera-retro"></i>
               <h4>Ko Image Lara</h4>
               <p>Lorem ipsum is dummy lorem very dumy</p>
@@ -113,8 +114,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 colg-md-6">
+        <div class="row wow zoomIn">
+          <div class="col-lg-4 colg-md-6 ">
             <div class="works-box">
               <img class="img-responsive" src="img/works/1.jpg" alt="картина">
               <div class="signature">
@@ -142,7 +143,7 @@
           </div>
         </div>
       </div>
-        <div class="row">
+        <div class="row wow zoomIn">
           <div class="col-lg-4 colg-md-6">
             <div class="works-box">
               <img class="img-responsive" src="img/works/4.jpg" alt="картина">
@@ -171,7 +172,7 @@
           </div>
         </div>
       </div>
-        <div class="row">
+        <div class="row wow zoomIn">
           <div class="col-lg-4 colg-md-6">
             <div class="works-box">
               <img class="img-responsive" src="img/works/6.jpg" alt="картина">
@@ -206,8 +207,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 section-header text-center">
-            <h2><span>Services</span> We Provide</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.</p>
+            <h2 class="wow rollIn"><span>Services</span> We Provide</h2>
+            <p class="wow rollIn">Lorem ipsum dolor sit amet consectetur adipisicing elit Maiores fuga provident Libero.</p>
           </div>
           <div class="row">
             <div class="col-lg-2">
@@ -262,8 +263,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 section-header text-center">
-          <h2><span>Clients</span> Said</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo alias a repellat reprehenderit.</p>
+          <h2 class="wow bounceInLeft"><span>Clients</span> Said</h2>
+          <p class="wow bounceInLeft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo alias a repellat reprehenderit.</p>
         </div>
       </div>
       <div class="row">
@@ -444,6 +445,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <script>
       $(document).ready(function(){
         $('.feedback-slider').slick({
