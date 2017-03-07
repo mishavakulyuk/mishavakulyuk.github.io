@@ -28,7 +28,6 @@ body{
 	color:@base-text;
 }
 header{
-	background: @base-fon url(../img/header-fon.jpg);
 	background-size: cover;
 	min-height: 780px;
 	height:100vh; 
@@ -70,7 +69,7 @@ input,button,textarea{
 		p{
 			.opn-bold;
 			font-size:37px;
-			color:@base-black;
+			color:@white;
 			span{
 				color:lighten(@base-red, 10%);
 			}
@@ -85,7 +84,9 @@ input,button,textarea{
 	&-text{
 		margin-top:5%;
 		text-align: center;
+		color:@white;
 		h1{
+			color:@white;
 			.opn-bold;
 			font-size:50px;
 			span{
@@ -136,7 +137,7 @@ input,button,textarea{
 		
 	input, textarea{
 		width: 100%;
-		border:none;
+		border: none;
 		border-bottom:1px solid @form-line;
 		margin-top: 30px;
 		font-size: 15px;
@@ -188,6 +189,7 @@ input,button,textarea{
 		padding: 25px;
 		padding-top: 30px;
 		text-align: center;
+
 		i.fa {
 			font-size:50px;
 		}
@@ -245,7 +247,7 @@ i.fa-camera-retro{
 }
 
 .works-box {
-width:100%;
+width:400px;
 height:100%;
 float:left;
 overflow:hidden;
@@ -544,4 +546,118 @@ footer{
 .lefting{
 float:left;
     margin: 7px 7px 7px 0;
+}
+
+@media (min-width: 0px) and (max-width: 767px){
+	.main{
+		&-text{
+			h1{
+				font-size:30px;
+			}
+		}
+	}
+	.section{
+		&-header{
+			h2{
+				font-size:30px;
+			}
+		}
+	}
+	.process-box{
+		margin-top: 70px;
+		h4{
+			font-size:16px;
+		}
+		p{
+			padding-bottom: 15px;
+			font-size: 12px;
+		}
+		span{
+			font-size: 14px;
+		}
+	}
+	.works-box{
+		width: 360px;
+	}
+}
+@media (min-width:768px) and (max-width:991px){
+	.process-box{
+		margin-top: 70px;
+		p{
+			padding-bottom: 20px;
+		}
+	}
+}
+@media (min-width:992px) and (max-width:1999px){
+	.section{
+		&-header{
+			h2{
+				font-size:30px;
+			}
+		}
+	}
+	.process-box{
+		margin-top: 70px;
+		p{
+			padding-bottom: 12px;
+		}
+	}
+	
+}
+@media (min-width:1200px) and (max-width:1600px){
+	
+}
+@media (min-width:1601px){
+	
+}
+
+input:required{
+	border: 1px solid red;
+}
+
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+#layer-1{
+	margin-top: 10%;
+	margin-left:60%;
+}
+
+#layer-2{
+	margin-top: -10%;
+	margin-left:30%;
 }

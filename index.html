@@ -11,18 +11,30 @@
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="mail.php">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header id="main">
+        <div class="video-container">
+          <div class="filter"></div>
+          <video autoplay loop class="fillWidth">
+              <source src="video-bg/MP4/Love-Coding.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+              <source src="video-bg/WEBM/Love-Coding.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          </video>
+          <div class="poster hidden">
+              <img src="video-bg/Snapshots/Love-Coding.jpg" alt="">
+          </div>
+    </div>
+
       <div class="container">
         <div class="row main-head">
-          <div class="col-lg-6 main-logo">
+          <div class="col-xs-6 main-logo">
             <div class="main-logo-border">
               <p><span class="color-logo">S</span>mart</p>
             </div>
           </div>
-          <div class="col-lg-6 main-nav" >
+          <div class="col-xs-6 main-nav" >
             <a class="main-nav-bar" href="#">
               <span class="line"></span>
             </a>
@@ -35,13 +47,13 @@
           </div>
         </div>
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 col-md-6 col-md-offset-3">
           <div class="main-form wow fadeInUp">
             <p class="main-form-header"><span>Send</span> A Message</p>
-            <form action="#">
-              <input type="text" placeholder="Your Name">
-              <input type="email" placeholder="Your Email">
-              <textarea rows="3" placeholder="Your Message"></textarea>
+            <form id="main-form-ajax"action="#">
+              <input type="text"  name="username" placeholder="Your Name">
+              <input type="email" name="email" placeholder="Your Email">
+              <textarea rows="3" name="user_message" placeholder="Your Message"></textarea>
               <button class="main-form-btn" type="submit">
                 Send Message
               </button>
@@ -50,19 +62,17 @@
         </div>
       </div>
       </div>
-      
     </header>
-    
     <section id="process">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 section-header text-center">
+          <div class="col-xs-12 section-header text-center">
             <h2><span>Working</span> Process</h2>
             <p>Lorem ipsum dolor sit amet consectet ur adipiscing elit    Vestibulum bibend um vestibulum.</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-xs-6 col-sm-3">
             <div class="process-box wow fadeInLeft box-tomi" data-wow-delay="0.2s">
               <i class="fa fa-magnet"></i>
               <h4>Koc Koi Tomi</h4>
@@ -72,7 +82,7 @@
               </button>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-xs-6 col-sm-3">
             <div class="process-box wow fadeInLeft box-koimona" data-wow-delay="0.4s">
               <i class="fa fa-bug"></i>
               <h4>Koimona Set</h4>
@@ -82,7 +92,7 @@
               </button>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-xs-6 col-sm-3">
             <div class="process-box wow fadeInRight box-koire" data-wow-delay="0.4s">
               <i class="fa fa-cogs"></i>
               <h4>Setting Koire</h4>
@@ -92,7 +102,7 @@
               </button>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-xs-6 col-sm-3">
             <div class="process-box wow fadeInRight box-lara" data-wow-delay="0.2s">
               <i class="fa fa-camera-retro"></i>
               <h4>Ko Image Lara</h4>
@@ -203,6 +213,28 @@
       </div>
       </div> <!-- /container -->
     </section>
+    <section id="parallax">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 section-header text-center">
+            <h2><span>Parallax</span> section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dignissimos hic et?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sx-12">
+            <ul id="scene">
+              <li class="layer" id="layer-1" data-depth="0.50"><img src="img/services/1list.png"></li>
+              <li class="layer" id="layer-2" data-depth="1.20"><img src="img/services/2list.png"></li>
+              <li class="layer" id="layer-3" data-depth="2.40"><img src="img/services/3list.png"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+
     <section id="services">
       <div class="container">
         <div class="row">
@@ -463,5 +495,94 @@
         });
       });
     </script>
+
+  <script>
+    $(document).ready(function() {
+    $("#main-form-ajax").submit(function() {
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+        
+        $('#myModal-set').modal('show');
+        $("#main-form-ajax").trigger("reset");
+      });
+      return false;
+    });
+    
+  });
+</script>
+  
+<script>
+  //jQuery is required to run this code
+$( document ).ready(function() {
+
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+
+});
+
+function scaleVideoContainer() {
+
+    var height = $(window).height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+    windowHeight = $(window).height() + 5,
+    videoWidth,
+    videoHeight;
+
+    // console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if(windowWidth < 1000){
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+            $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+    });
+}
+</script>
+<script src="js/jquery.parallax.js"></script>
+<script>
+  $('#scene').parallax();
+</script>
   </body>
 </html>
